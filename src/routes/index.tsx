@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import ContactPage from '../pages/ContactPage';
 import SobreNos from '../pages/SobreNos';
+import Servicos from '../pages/Servicos';
 import NotFound from '../pages/NotFound';
 import { ROUTES } from '../config/routes';
 
@@ -33,6 +34,12 @@ const AppRoutes = () => (
       <Route path={ROUTES.SOBRE} element={
         <DefaultLayout>
           <SobreNos />
+        </DefaultLayout>
+      } />
+      
+      <Route path={ROUTES.SERVICOS} element={
+        <DefaultLayout>
+          <Servicos />
         </DefaultLayout>
       } />
       

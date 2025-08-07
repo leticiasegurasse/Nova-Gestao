@@ -1,8 +1,15 @@
 import logoSvg from '../assets/images/logos/icone.svg';
 import { Facebook, Instagram, Twitter, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { useLocation, Link } from 'react-router-dom';
 import { ROUTES } from '../config/routes';
 
 const Footer = () => {
+  const location = useLocation();
+
+  const isActiveRoute = (route: string) => {
+    return location.pathname === route;
+  };
+
   return (
     <footer className="bg-[var(--color-primary-100)] border-t border-[var(--color-primary-100)]">
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -11,7 +18,7 @@ const Footer = () => {
           {/* Coluna Esquerda - Logo e Redes Sociais */}
           <div className="space-y-6 flex flex-col items-center md:items-start">
             {/* Logo e Nome da Empresa */}
-            <div className="flex items-center space-x-3">
+            <Link to={ROUTES.HOME} className="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-200">
               <img 
                 src={logoSvg}
                 alt="Nova Gestão Médica" 
@@ -20,7 +27,7 @@ const Footer = () => {
               <span className="font-semibold text-lg text-[var(--color-primary-800)]">
                 Nova Gestão Médica
               </span>
-            </div>
+            </Link>
             
             {/* Redes Sociais */}
             <div className="flex space-x-3">
@@ -57,24 +64,56 @@ const Footer = () => {
               Menu
             </h3>
             <nav className="space-y-2">
-                             <a href={ROUTES.HOME} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                 Home
-               </a>
-               <a href={ROUTES.SERVICOS} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+              <Link 
+                to={ROUTES.HOME} 
+                className={`block transition-colors duration-200 ${
+                  isActiveRoute(ROUTES.HOME) 
+                    ? 'text-[var(--color-primary)] font-semibold' 
+                    : 'text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]'
+                }`}
+              >
+                Home
+              </Link>
+                             <Link 
+                 to={ROUTES.SERVICOS} 
+                 className={`block transition-colors duration-200 ${
+                   isActiveRoute(ROUTES.SERVICOS) 
+                     ? 'text-[var(--color-primary)] font-semibold' 
+                     : 'text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]'
+                 }`}
+               >
                  Serviços
-               </a>
-               <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                 Blog
-               </a>
-               <a href={ROUTES.SOBRE} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+               </Link>
+               <Link 
+                 to={ROUTES.SOBRE} 
+                 className={`block transition-colors duration-200 ${
+                   isActiveRoute(ROUTES.SOBRE) 
+                     ? 'text-[var(--color-primary)] font-semibold' 
+                     : 'text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]'
+                 }`}
+               >
                  Sobre Nós
-               </a>
-               <a href={ROUTES.CONTATO} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                 Contato
-               </a>
-               <a href={ROUTES.PRIVACY_POLICY} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                 Policy
-               </a>
+               </Link>
+              <Link 
+                to={ROUTES.CONTATO} 
+                className={`block transition-colors duration-200 ${
+                  isActiveRoute(ROUTES.CONTATO) 
+                    ? 'text-[var(--color-primary)] font-semibold' 
+                    : 'text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]'
+                }`}
+              >
+                Contato
+              </Link>
+              <Link 
+                to={ROUTES.PRIVACY_POLICY} 
+                className={`block transition-colors duration-200 ${
+                  isActiveRoute(ROUTES.PRIVACY_POLICY) 
+                    ? 'text-[var(--color-primary)] font-semibold' 
+                    : 'text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]'
+                }`}
+              >
+                Policy
+              </Link>
             </nav>
           </div>
 
