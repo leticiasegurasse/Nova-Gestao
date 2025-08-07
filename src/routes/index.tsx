@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import ContactPage from '../pages/ContactPage';
 import SobreNos from '../pages/SobreNos';
+import NotFound from '../pages/NotFound';
 import { ROUTES } from '../config/routes';
 
 const AppRoutes = () => (
@@ -36,6 +37,7 @@ const AppRoutes = () => (
       } />
       
       {/* Rota 404 - Sem layout para ter design próprio */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 );

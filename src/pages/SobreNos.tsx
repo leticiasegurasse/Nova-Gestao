@@ -62,15 +62,6 @@ const SobreNos = () => {
         </div>
         {/* Conteúdo Principal */}
         <div className="grid lg:grid-cols-2 gap-12">
-            {/* Coluna Esquerda - Imagem Principal */}
-            <div className="relative">
-              <img 
-                src={imgHospital}
-                alt="Médico sorrindo com estetoscópio"
-                className="w-full h-auto rounded-xl shadow-lg"
-              />
-            </div>
-
             {/* Coluna Direita - Cards de Diferenciação */}
             <div className="space-y-6">
               
@@ -95,6 +86,15 @@ const SobreNos = () => {
                 alt="Profissionais jurídicos"
               />
 
+            </div>
+
+            {/* Coluna Esquerda - Imagem Principal */}
+            <div className="relative">
+              <img 
+                src={imgHospital}
+                alt="Médico sorrindo com estetoscópio"
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
             </div>
 
           </div>
