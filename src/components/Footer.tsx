@@ -142,11 +142,26 @@ const Footer = () => {
                  </span>
                </div>
              </div>
-          </div>
+                     </div>
 
-        </div>
-      </div>
-    </footer>
+         </div>
+         
+         {/* Footer inferior com créditos */}
+         <div className="mt-8 pt-8 border-t border-[var(--color-primary-200)] text-center">
+           <p className="text-sm text-[var(--color-primary-700)]">
+             Desenvolvido por{' '}
+             <a 
+               href="https://sgr.dev.br" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="text-[var(--color-primary)] hover:text-[var(--color-primary-600)] font-semibold transition-colors duration-200"
+             >
+               SGR.DEV
+             </a>
+           </p>
+         </div>
+       </div>
+     </footer>
   );
 };
 
