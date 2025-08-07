@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import iconeSvg from '../assets/images/logos/icone.svg';
+import { ROUTES } from '../config/routes';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,19 +36,19 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a 
-              href="#servicos" 
+              href={ROUTES.SERVICOS} 
               className="transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
             >
               Serviços
             </a>
             <a 
-              href="#sobre" 
+              href={ROUTES.SOBRE} 
               className="transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
             >
               Sobre Nós
             </a>
             <a 
-              href="#contato" 
+              href={ROUTES.CONTATO} 
               className="transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
             >
               Contato
@@ -78,21 +79,21 @@ const Header = () => {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 border-t bg-[var(--color-primary-50)] border-[var(--color-primary-100)]">
               <a 
-                href="#servicos" 
+                href={ROUTES.SERVICOS} 
                 className="block px-3 py-2 transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Serviços
               </a>
               <a 
-                href="#sobre" 
+                href={ROUTES.SOBRE} 
                 className="block px-3 py-2 transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sobre Nós
               </a>
               <a 
-                href="#contato" 
+                href={ROUTES.CONTATO} 
                 className="block px-3 py-2 transition-colors duration-200 font-medium text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)]"
                 onClick={() => setIsMenuOpen(false)}
               >

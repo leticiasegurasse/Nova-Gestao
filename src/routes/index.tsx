@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Home from '../pages/Home';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
+import ContactPage from '../pages/ContactPage';
 import { ROUTES } from '../config/routes';
 
 const AppRoutes = () => (
@@ -18,6 +19,12 @@ const AppRoutes = () => (
       <Route path={ROUTES.PRIVACY_POLICY} element={
         <DefaultLayout>
           <PrivacyPolicy />
+        </DefaultLayout>
+      } />
+      
+      <Route path={ROUTES.CONTATO} element={
+        <DefaultLayout>
+          <ContactPage />
         </DefaultLayout>
       } />
       

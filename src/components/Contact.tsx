@@ -22,7 +22,10 @@ const Contact = () => {
           <p className="text-lg md:text-xl max-w-4xl mx-auto leading-relaxed text-[var(--color-gray-700)] mb-8">
             Porque quem entende a rotina médica, entrega mais.
           </p>
-          <button className="px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-200 text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-600)] flex items-center space-x-3 mx-auto">
+            <button 
+             onClick={() => window.open('https://wa.me/5511959327581', '_blank')}
+             className="px-8 py-4 rounded-lg font-medium text-lg transition-colors duration-200 text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-600)] flex items-center space-x-3 mx-auto cursor-pointer"
+           >
             <span>Fale Conosco</span>
             <ArrowRight className="h-5 w-5" />
           </button>

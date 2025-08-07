@@ -1,5 +1,6 @@
 import logoSvg from '../assets/images/logos/icone.svg';
 import { Facebook, Instagram, Twitter, Youtube, Phone, Mail, MapPin } from 'lucide-react';
+import { ROUTES } from '../config/routes';
 
 const Footer = () => {
   return (
@@ -56,22 +57,22 @@ const Footer = () => {
               Menu
             </h3>
             <nav className="space-y-2">
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Home
-              </a>
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Serviços
-              </a>
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Blog
-              </a>
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Sobre Nós
-              </a>
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Contato
-              </a>
-                             <a href="/privacy-policy" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                             <a href={ROUTES.HOME} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Home
+               </a>
+               <a href={ROUTES.SERVICOS} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Serviços
+               </a>
+               <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Blog
+               </a>
+               <a href={ROUTES.SOBRE} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Sobre Nós
+               </a>
+               <a href={ROUTES.CONTATO} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Contato
+               </a>
+               <a href={ROUTES.PRIVACY_POLICY} className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
                  Policy
                </a>
             </nav>
