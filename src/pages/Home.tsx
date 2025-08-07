@@ -11,6 +11,7 @@ import { Shield, Clock, Users, Stethoscope } from 'lucide-react';
 import { testimonials } from '../mocks/testimonials';
 import FAQ from '../components/FAQ';
 import Contact from '../components/Contact';
+import SobreCard from '../components/SobreCard';
 
 const Home = () => {
   return (
@@ -118,10 +119,10 @@ const Home = () => {
           </div>
 
           {/* Conteúdo dos Serviços */}
-          <div className="grid lg:grid-cols-2 gap-12 items-start">
+          <div className="flex flex-col lg:flex-row gap-4">
             
             {/* Coluna Esquerda - Cards de Serviços */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 w-1/2">
               
               {/* Card 1: Telemedicina e Plantão */}
               <div className="rounded-xl shadow-lg p-6 border transition-all duration-300 cursor-pointer bg-[var(--color-primary-50)] border-[var(--color-primary)] hover:bg-[var(--color-primary-100)] hover:-translate-y-1 hover:shadow-[0_10px_25px_rgba(35,140,210,0.15)]">
@@ -194,15 +195,12 @@ const Home = () => {
             </div>
 
             {/* Coluna Direita - Imagem do Médico */}
-            <div className="relative">
-              <div className="relative z-10">
-                <img 
-                  src={imgServico}
-                  alt="Médico sorrindo com estetoscópio"
-                  className="w-full h-auto rounded-xl shadow-lg"
+            <div className="w-1/2">
+              <img 
+                src={imgServico}
+                alt="Médico sorrindo com estetoscópio"
+                className="rounded-xl shadow-lg"
                 />
-              </div>
-             
             </div>
 
           </div>
@@ -231,7 +229,6 @@ const Home = () => {
 
           {/* Conteúdo Principal */}
           <div className="grid lg:grid-cols-2 gap-12">
-            
             {/* Coluna Esquerda - Imagem Principal */}
             <div className="relative">
               <img 
@@ -244,68 +241,26 @@ const Home = () => {
             {/* Coluna Direita - Cards de Diferenciação */}
             <div className="space-y-6">
               
-              {/* Card 1: Excelência Médica */}
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={card1SobreNos}
-                      alt="Equipe médica colaborando"
-                      className="w-28 h-28 object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-[var(--color-gray-800)]">
-                      Excelência Médica com Coordenação Ativa
-                    </h3>
-                    <p className="leading-relaxed text-[var(--color-gray-600)]">
-                      Nossas equipes são formadas por médicos experientes, com suporte constante de uma coordenação assistencial próxima e resolutiva.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <SobreCard 
+                image={card1SobreNos}
+                title="Excelência Médica com Coordenação Ativa"
+                description="Nossas equipes são formadas por médicos experientes, com suporte constante de uma coordenação assistencial próxima e resolutiva."
+                alt="Equipe médica colaborando"
+              />
 
-              {/* Card 2: Tecnologia */}
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={card2SobreNos}
-                      alt="Médico usando tecnologia"
-                      className="w-28 h-28 object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-[var(--color-gray-800)]">
-                      Tecnologia que Trabalha por Você
-                    </h3>
-                    <p className="leading-relaxed text-[var(--color-gray-600)]">
-                      Integramos soluções como IA e transcrição automática para reduzir a burocracia e aumentar a qualidade do atendimento.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <SobreCard 
+                image={card2SobreNos}
+                title="Tecnologia que Trabalha por Você"
+                description="Integramos soluções como IA e transcrição automática para reduzir a burocracia e aumentar a qualidade do atendimento."
+                alt="Médico usando tecnologia"
+              />
 
-              {/* Card 3: Defesa Jurídica */}
-              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-100">
-                <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <div className="flex-shrink-0">
-                    <img 
-                      src={card3SobreNos}
-                      alt="Profissionais jurídicos"
-                      className="w-28 h-28 object-cover rounded-lg"
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold mb-3 text-[var(--color-gray-800)]">
-                      Defesa Jurídica Especializada
-                    </h3>
-                    <p className="leading-relaxed text-[var(--color-gray-600)]">
-                      Parceria com os melhores escritórios e peritos do país. Segurança jurídica real, com análise técnica e acompanhamento estratégico de ponta a ponta.
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <SobreCard 
+                image={card3SobreNos}
+                title="Defesa Jurídica Especializada"
+                description="Parceria com os melhores escritórios e peritos do país. Segurança jurídica real, com análise técnica e acompanhamento estratégico de ponta a ponta."
+                alt="Profissionais jurídicos"
+              />
 
             </div>
 

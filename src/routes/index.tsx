@@ -4,6 +4,7 @@ import DefaultLayout from '../layouts/DefaultLayout';
 import Home from '../pages/Home';
 import PrivacyPolicy from '../pages/PrivacyPolicy';
 import ContactPage from '../pages/ContactPage';
+import SobreNos from '../pages/SobreNos';
 import { ROUTES } from '../config/routes';
 
 const AppRoutes = () => (
@@ -25,6 +26,12 @@ const AppRoutes = () => (
       <Route path={ROUTES.CONTATO} element={
         <DefaultLayout>
           <ContactPage />
+        </DefaultLayout>
+      } />
+      
+      <Route path={ROUTES.SOBRE} element={
+        <DefaultLayout>
+          <SobreNos />
         </DefaultLayout>
       } />
       
