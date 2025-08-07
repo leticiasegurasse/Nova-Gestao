@@ -15,7 +15,7 @@ const DefaultLayout = ({ children }: Props) => {
   return (
     <div className="min-h-screen overflow-x-hidden bg-gray-50">
       <Header />
-      <main className="w-full mt-16 md:mt-20 mx-auto p-6 lg:p-0">
+      <main className="w-full mt-16 md:mt-20 mx-auto">
         {children}
       </main>
       <Footer />

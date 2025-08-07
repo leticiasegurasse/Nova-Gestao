@@ -5,10 +5,10 @@ const Footer = () => {
   return (
     <footer className="bg-[var(--color-primary-100)] border-t border-[var(--color-primary-100)]">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           
           {/* Coluna Esquerda - Logo e Redes Sociais */}
-          <div className="space-y-6">
+          <div className="space-y-6 flex flex-col items-center md:items-start">
             {/* Logo e Nome da Empresa */}
             <div className="flex items-center space-x-3">
               <img 
@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
 
           {/* Coluna Central - Menu */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-lg text-[var(--color-primary-800)]">
               Menu
             </h3>
@@ -71,37 +71,37 @@ const Footer = () => {
               <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
                 Contato
               </a>
-              <a href="#" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
-                Policy
-              </a>
+                             <a href="/privacy-policy" className="block text-[var(--color-primary-800)] hover:text-[var(--color-primary-600)] transition-colors duration-200">
+                 Policy
+               </a>
             </nav>
           </div>
 
           {/* Coluna Direita - Informações de Contato */}
-          <div className="space-y-4">
+          <div className="space-y-4 flex flex-col items-center md:items-start">
             <h3 className="font-semibold text-lg text-[var(--color-gray-800)]">
               Informações de Contato
             </h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
-                <span className="text-[var(--color-primary-800)]">
-                  +55 11 959 327 581
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
-                <span className="text-[var(--color-primary-800)]">
-                  admin@novagestaomedica.com
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <MapPin className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
-                <span className="text-[var(--color-primary-800)]">
-                  Av. Paulista, 1636 - Sala 1504
-                </span>
-              </div>
-            </div>
+                         <div className="space-y-3 flex flex-col items-center md:items-start">
+               <div className="flex items-center space-x-3 justify-center md:justify-start">
+                 <Phone className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
+                 <span className="text-[var(--color-primary-800)]">
+                   +55 11 959 327 581
+                 </span>
+               </div>
+               <div className="flex items-center space-x-3 justify-center md:justify-start">
+                 <Mail className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
+                 <span className="text-[var(--color-primary-800)]">
+                   admin@novagestaomedica.com
+                 </span>
+               </div>
+               <div className="flex items-center space-x-3 justify-center md:justify-start">
+                 <MapPin className="h-5 w-5 text-[var(--color-primary)] flex-shrink-0" />
+                 <span className="text-[var(--color-primary-800)]">
+                   Av. Paulista, 1636 - Sala 1504
+                 </span>
+               </div>
+             </div>
           </div>
 
         </div>

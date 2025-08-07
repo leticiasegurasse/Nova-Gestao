@@ -2,6 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DefaultLayout from '../layouts/DefaultLayout';
 import Home from '../pages/Home';
+import PrivacyPolicy from '../pages/PrivacyPolicy';
 import { ROUTES } from '../config/routes';
 
 const AppRoutes = () => (
@@ -11,6 +12,12 @@ const AppRoutes = () => (
       <Route path={ROUTES.HOME} element={
         <DefaultLayout>
           <Home />
+        </DefaultLayout>
+      } />
+      
+      <Route path={ROUTES.PRIVACY_POLICY} element={
+        <DefaultLayout>
+          <PrivacyPolicy />
         </DefaultLayout>
       } />
       
